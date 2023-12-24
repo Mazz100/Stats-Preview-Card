@@ -1,0 +1,76 @@
+//Varialbes
+$mainbackground: hsl(233, 47%, 7%);
+$cardbackground: hsl(244, 38%, 16%);
+$accent: hsl(277, 64%, 61%);
+
+@use 'reset';
+
+@mixin Flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+body {
+    background-color: $mainbackground;
+
+    @include Flex();
+    gap: 2rem;
+}
+
+.main-container {
+    max-width: 21rem;
+}
+
+.image-style {
+    border-radius: 12px;
+}
+
+.card-wrapper {
+    @include Flex();
+    background-color: $cardbackground;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 16px;
+}
+
+.top-content {
+    h1 {
+        font-size: 2rem;
+        text-wrap: balance;
+
+        padding-top: 12px;
+        padding-bottom: 24px;
+
+    }
+
+    .highlight {
+        color: $accent;
+    }
+
+    p {
+        color: hsla(0, 0%, 100%, 0.75);
+        padding-bottom: 24px;
+    }
+}
+
+.statistics {
+
+    p {
+        font-weight: 700;
+    }
+
+    span {
+        text-transform: uppercase;
+        font-size: 0.6rem;
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+
+    .stat1,
+    .stat2,
+    .stat3 {
+        padding-bottom: 16px;
+    }
+}
