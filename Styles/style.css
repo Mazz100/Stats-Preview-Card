@@ -95,7 +95,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .main-container {
@@ -103,7 +103,15 @@ body {
 }
 
 .image-style {
-  border-radius: 12px;
+  background-color: hsl(285, 77%, 45%);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+img {
+  mix-blend-mode: multiply;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 
 .card-wrapper {
@@ -114,25 +122,33 @@ body {
   background-color: hsl(244, 38%, 16%);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  padding: 16px;
+  padding: 32px;
 }
 
 .top-content h1 {
   font-size: 2rem;
   text-wrap: balance;
-  padding-top: 12px;
-  padding-bottom: 24px;
+  padding-bottom: 8px;
 }
 .top-content .highlight {
   color: hsl(277, 64%, 61%);
 }
 .top-content p {
   color: hsla(0, 0%, 100%, 0.75);
+  font-size: 0.875rem;
+  padding: 16px;
   padding-bottom: 24px;
 }
 
+.statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .statistics p {
   font-weight: 700;
+  font-size: 1.25rem;
 }
 .statistics span {
   text-transform: uppercase;
@@ -143,4 +159,50 @@ body {
 .statistics .stat2,
 .statistics .stat3 {
   padding-bottom: 16px;
+}
+
+@media (min-width: 50rem) {
+  .main-container {
+    max-width: 56rem;
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .image-style {
+    border-top-left-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  img {
+    border-top-left-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .top-content {
+    text-align: left;
+  }
+  .top-content p {
+    padding: 0;
+  }
+  .card-wrapper {
+    grid-area: 1/1/2/2;
+    justify-content: space-between;
+    padding: 48px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .statistics {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+  }
+  .statistics .stat1,
+  .statistics .stat2,
+  .statistics .stat3 {
+    padding: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
