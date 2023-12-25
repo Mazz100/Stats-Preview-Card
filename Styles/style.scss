@@ -26,17 +26,15 @@ body {
     max-width: 21rem;
 }
 
-//Background blend for image
 .image-style {
     background-color: hsl(285, 77%, 45%);
+
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
 
 img {
     mix-blend-mode: multiply;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
 }
 
 .card-wrapper {
@@ -51,7 +49,7 @@ img {
     h1 {
         font-size: 2rem;
         text-wrap: balance;
-  
+
         padding-bottom: 8px;
 
     }
@@ -89,6 +87,16 @@ img {
     }
 }
 
+//Footer attributes
+.attribution {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 100%, 68%);
+}
+
 @mixin Grid($columns, $rows) {
     display: grid;
     grid-template-columns: repeat($columns, 1fr);
@@ -97,10 +105,8 @@ img {
 
 @media (min-width: 50rem) {
     .main-container {
-        max-width: 56rem;
-    }
+        max-width: 64rem;
 
-    main {
         @include Grid(2, 1);
     }
 
@@ -111,15 +117,12 @@ img {
         border-bottom-right-radius: 8px;
     }
 
-    img {
-        border-top-left-radius: 0;
-
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
-    }
-
     .top-content {
         text-align: left;
+
+        h1{
+            padding-bottom: 24px;
+        }
 
         p {
             padding: 0;
@@ -128,8 +131,8 @@ img {
 
     .card-wrapper {
         grid-area: 1/1/2/2;
-        justify-content: space-between;
-        padding: 48px;
+        justify-content: space-around;
+        padding: 52px;
 
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
@@ -137,7 +140,7 @@ img {
 
     .statistics {
         @include Flex(row);
-        gap: 6rem;
+        gap: 7rem;
 
         .stat1,
         .stat2,

@@ -110,8 +110,6 @@ body {
 
 img {
   mix-blend-mode: multiply;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
 }
 
 .card-wrapper {
@@ -161,11 +159,18 @@ img {
   padding-bottom: 16px;
 }
 
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 100%, 68%);
+}
+
 @media (min-width: 50rem) {
   .main-container {
-    max-width: 56rem;
-  }
-  main {
+    max-width: 64rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
@@ -175,21 +180,19 @@ img {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
   }
-  img {
-    border-top-left-radius: 0;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-  }
   .top-content {
     text-align: left;
+  }
+  .top-content h1 {
+    padding-bottom: 24px;
   }
   .top-content p {
     padding: 0;
   }
   .card-wrapper {
     grid-area: 1/1/2/2;
-    justify-content: space-between;
-    padding: 48px;
+    justify-content: space-around;
+    padding: 52px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
   }
@@ -198,7 +201,7 @@ img {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 6rem;
+    gap: 7rem;
   }
   .statistics .stat1,
   .statistics .stat2,
